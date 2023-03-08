@@ -1,8 +1,9 @@
+import Sidebar from '../components/Sidebar'
 import '../styles/globals.css'
 
 export const metadata = {
   title: 'Amazon Web Scraper',
-  description: 'A Helper App for your future purchases',
+  description: 'A helpinh hand app for your future purchases',
 }
 
 export default function RootLayout({
@@ -12,7 +13,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className='flex bg-[#f7fbff] h-screen'>
+        <Sidebar/>
+
+        <main className='w-full p-10 mx-auto overflow-y-auto max-w-7xl'>
+          {/* Header */}
+          {children}
+        </main>
+        </body>
     </html>
   )
 }
